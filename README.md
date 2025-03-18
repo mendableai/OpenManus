@@ -1,4 +1,4 @@
-English | [中文](README_zh.md)
+English | [中文](README_zh.md) | [한국어](README_ko.md)
 
 [![GitHub stars](https://img.shields.io/github/stars/mannaandpoem/OpenManus?style=social)](https://github.com/mannaandpoem/OpenManus/stargazers)
 &ensp;
@@ -7,12 +7,9 @@ English | [中文](README_zh.md)
 
 # 👋 OpenManus
 
-[Official Website](https://openmanus.github.io/)
+Manus is incredible, but OpenManus can achieve any idea without an _Invite Code_ 🛫!
 
-Manus is incredible, but OpenManus can achieve any idea without an *Invite Code* 🛫!
-
-Our team
-members [@mannaandpoem](https://github.com/mannaandpoem) [@XiangJinyu](https://github.com/XiangJinyu) [@MoshiQAQ](https://github.com/MoshiQAQ) [@didiforgithub](https://github.com/didiforgithub) [@stellaHSR](https://github.com/stellaHSR), we are from [@MetaGPT](https://github.com/geekan/MetaGPT). The prototype is launched within 3 hours and we are keeping building!
+Our team members [@Xinbin Liang](https://github.com/mannaandpoem) and [@Jinyu Xiang](https://github.com/XiangJinyu) (core authors), along with [@Zhaoyang Yu](https://github.com/MoshiQAQ), [@Jiayi Zhang](https://github.com/didiforgithub), and [@Sirui Hong](https://github.com/stellaHSR), we are from [@MetaGPT](https://github.com/geekan/MetaGPT). The prototype is launched within 3 hours and we are keeping building!
 
 It's a simple implementation, so we welcome any suggestions, contributions, and feedback!
 
@@ -108,6 +105,25 @@ base_url = "https://api.openai.com/v1"
 api_key = "sk-..."  # Replace with your actual API key
 ```
 
+### Firecrawl Configuration (Optional)
+
+If you want to use the Firecrawl web scraping tool, you'll need to set up your Firecrawl API key:
+
+1. Get your API key from [Firecrawl](https://firecrawl.dev)
+2. Add it to your environment variables/config.toml
+
+```bash
+export FIRECRAWL_API_KEY="fc-YOUR_API_KEY"
+```
+
+Or add it to your `config.toml` file:
+
+```toml
+# Firecrawl configuration
+[tools.firecrawl]
+api_key = "fc-YOUR_API_KEY"
+```
+
 ## Quick Start
 
 One line for run OpenManus:
@@ -124,17 +140,28 @@ For unstable version, you also can run:
 python run_flow.py
 ```
 
+### Using Firecrawl Scrape
+
+You can use the Firecrawl scrape tool to extract content from websites. Here's an example prompt:
+
+```
+Scrape the website https://firecrawl.dev and summarize its main features.
+```
+
+You can also run the Firecrawl example:
+
+```bash
+python examples/firecrawl_example.py
+```
+
 ## How to contribute
 
 We welcome any friendly suggestions and helpful contributions! Just create issues or submit pull requests.
 
 Or contact @mannaandpoem via 📧email: mannaandpoem@gmail.com
 
-## Roadmap
-
-- [ ] Improve the UI’s visual appeal to create a more intuitive and seamless user experience.
-
 ## Community Group
+
 Join our networking group on Feishu and share your experience with other developers!
 
 <div align="center" style="display: flex; gap: 20px;">
@@ -150,9 +177,12 @@ Join our networking group on Feishu and share your experience with other develop
 Thanks to [anthropic-computer-use](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo)
 and [browser-use](https://github.com/browser-use/browser-use) for providing basic support for this project!
 
+Additionally, we are grateful to [AAAJ](https://github.com/metauto-ai/agent-as-a-judge), [MetaGPT](https://github.com/geekan/MetaGPT) and [OpenHands](https://github.com/All-Hands-AI/OpenHands).
+
 OpenManus is built by contributors from MetaGPT. Huge thanks to this agent community!
 
 ## Cite
+
 ```bibtex
 @misc{openmanus2025,
   author = {Xinbin Liang and Jinyu Xiang and Zhaoyang Yu and Jiayi Zhang and Sirui Hong},
